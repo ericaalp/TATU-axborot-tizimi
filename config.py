@@ -1,0 +1,3 @@
+﻿BOT_TOKEN = "8665500397:AAF1GSmJrZ1kvPFr7JD3_ZdZwxYnnT-I5Sk"
+SUPERADMIN_IDS = [6074182870, 6736670145]
+DB_DSN = "postgresql://postgres:2304@localhost:5432/tatu_sf"
