@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS oqituvchilar (
     telegram_file_id TEXT,
     xona_raqam INTEGER,
     bino TEXT,
-    faol BOOLEAN DEFAULT TRUE
+    faol BOOLEAN DEFAULT TRUE,
+    lavozim TEXT
 );
 
 CREATE TABLE IF NOT EXISTS dars_jadvali (
