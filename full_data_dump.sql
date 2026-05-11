@@ -20,6 +20,10 @@ SET row_security = off;
 -- Data for Name: kafedralar; Type: TABLE DATA; Schema: public; Owner: -
 --
 
+SET SESSION AUTHORIZATION DEFAULT;
+
+ALTER TABLE public.kafedralar DISABLE TRIGGER ALL;
+
 INSERT INTO public.kafedralar VALUES (1, 'Tillar', 'A', NULL, NULL);
 INSERT INTO public.kafedralar VALUES (8, 'Telekommunikatsiya injiniringi', 'A', NULL, NULL);
 INSERT INTO public.kafedralar VALUES (9, 'Raqamli va ta''lim texnologiyalari', 'A', NULL, NULL);
@@ -32,9 +36,13 @@ INSERT INTO public.kafedralar VALUES (6, 'Dasturiy injiniring', 'B', NULL, NULL)
 INSERT INTO public.kafedralar VALUES (7, 'Kompyuter tizimlari', 'B', NULL, NULL);
 
 
+ALTER TABLE public.kafedralar ENABLE TRIGGER ALL;
+
 --
 -- Data for Name: oqituvchilar; Type: TABLE DATA; Schema: public; Owner: -
 --
+
+ALTER TABLE public.oqituvchilar DISABLE TRIGGER ALL;
 
 INSERT INTO public.oqituvchilar VALUES (8, 2, 'X.', 'Samadov', NULL, '+998915273808', NULL, NULL, NULL, NULL, true, NULL);
 INSERT INTO public.oqituvchilar VALUES (9, 2, 'X.', 'Muxammadiyev', NULL, '+998915252161', NULL, NULL, NULL, NULL, true, NULL);
@@ -212,9 +220,13 @@ INSERT INTO public.oqituvchilar VALUES (142, 9, 'Z', 'Jozilova', NULL, '+9989884
 INSERT INTO public.oqituvchilar VALUES (111, 9, 'Sindor', 'Djumayev', NULL, '+998937252207', 'djumayev_sn', NULL, NULL, 'A', true, 'штат');
 
 
+ALTER TABLE public.oqituvchilar ENABLE TRIGGER ALL;
+
 --
 -- Data for Name: dars_jadvali; Type: TABLE DATA; Schema: public; Owner: -
 --
+
+ALTER TABLE public.dars_jadvali DISABLE TRIGGER ALL;
 
 INSERT INTO public.dars_jadvali VALUES (91, 87, 201, 'B', 'Multiagent tizimlar (a)', 'KI23-01', 'dushanba', '13:30:00', '14:50:00');
 INSERT INTO public.dars_jadvali VALUES (92, 84, 204, 'B', 'Ma''lumotlarning intellektual tahlili (a)', 'KI23-01', 'dushanba', '15:00:00', '16:20:00');
@@ -687,9 +699,13 @@ INSERT INTO public.dars_jadvali VALUES (562, 111, 321, 'A', 'Individual loyiha',
 INSERT INTO public.dars_jadvali VALUES (563, 111, 321, 'A', 'Individual loyiha', 'AKT-23-01', 'seshanba', '11:30:00', '12:50:00');
 
 
+ALTER TABLE public.dars_jadvali ENABLE TRIGGER ALL;
+
 --
 -- Data for Name: foydalanuvchilar; Type: TABLE DATA; Schema: public; Owner: -
 --
+
+ALTER TABLE public.foydalanuvchilar DISABLE TRIGGER ALL;
 
 INSERT INTO public.foydalanuvchilar VALUES (1, 7710675982, 'Shaxriza', 'Nurmuxammadova', '+998935792779', '2026-04-21 22:33:09.119831');
 INSERT INTO public.foydalanuvchilar VALUES (2, 8618873404, 'Zuhra Jozilova', 'Jozilova', '+998885451705', '2026-04-27 10:47:10.68569');
@@ -697,9 +713,13 @@ INSERT INTO public.foydalanuvchilar VALUES (3, 6736670145, 'Mehribon', 'Zayniyev
 INSERT INTO public.foydalanuvchilar VALUES (4, 170733546, 'Sindor', 'Djumayev', '+998937252207', '2026-04-27 15:19:00.258173');
 
 
+ALTER TABLE public.foydalanuvchilar ENABLE TRIGGER ALL;
+
 --
 -- Data for Name: loglar; Type: TABLE DATA; Schema: public; Owner: -
 --
+
+ALTER TABLE public.loglar DISABLE TRIGGER ALL;
 
 INSERT INTO public.loglar VALUES (1, 7710675982, 'sorov', 'Kafedralar', '2026-04-21 22:33:27.302236');
 INSERT INTO public.loglar VALUES (2, 7710675982, 'sorov', 'Xona holati', '2026-04-21 22:33:42.887071');
@@ -796,9 +816,13 @@ INSERT INTO public.loglar VALUES (92, 7710675982, 'sorov', 'Domla qidirish', '20
 INSERT INTO public.loglar VALUES (93, 7710675982, 'sorov', 'Kafedralar', '2026-05-10 21:34:24.391956');
 
 
+ALTER TABLE public.loglar ENABLE TRIGGER ALL;
+
 --
 -- Data for Name: xonalar; Type: TABLE DATA; Schema: public; Owner: -
 --
+
+ALTER TABLE public.xonalar DISABLE TRIGGER ALL;
 
 INSERT INTO public.xonalar VALUES (236, 230, 'A', 2, true, '13;30', NULL);
 INSERT INTO public.xonalar VALUES (265, 332, 'A', 3, false, NULL, NULL);
@@ -896,6 +920,8 @@ INSERT INTO public.xonalar VALUES (198, 314, 'B', 3, false, NULL, NULL);
 INSERT INTO public.xonalar VALUES (199, 316, 'B', 3, false, NULL, NULL);
 INSERT INTO public.xonalar VALUES (200, 317, 'B', 3, false, NULL, NULL);
 
+
+ALTER TABLE public.xonalar ENABLE TRIGGER ALL;
 
 --
 -- Name: dars_jadvali_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
