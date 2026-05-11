@@ -10,7 +10,8 @@ services:
       POSTGRES_DB: tatu_sf
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./create_tables.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ./full_data_dump.sql:/docker-entrypoint-initdb.d/02_data.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d tatu_sf"]
       interval: 5s

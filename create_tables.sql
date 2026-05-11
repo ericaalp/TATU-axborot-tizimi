@@ -60,14 +60,3 @@ CREATE TABLE IF NOT EXISTS loglar (
     vaqt TIMESTAMP DEFAULT NOW()
 );
 
-INSERT INTO kafedralar (nomi) VALUES
-('Tillar'),
-('Ijtimoiy gumanitar-1'),
-('Ijtimoiy gumanitar-2'),
-('Tabiiy fanlar'),
-('Axborot texnologiyalari'),
-('Dasturiy injiniring'),
-('Kompyuter tizimlari'),
-('Telekommunikatsiya injiniringi'),
-('Raqamli va ta''lim texnologiyalari'),
-('Axborot xavfsizligi');
