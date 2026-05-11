@@ -11,6 +11,7 @@ services:
       - .:/usr/src/app/bot
     command: python3 -m bot
     restart: always
+    network_mode: "host"
     env_file:
       - ".env"
 
